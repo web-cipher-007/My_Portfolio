@@ -6,7 +6,7 @@ import {
 } from '@fortawesome/free-brands-svg-icons';
 import { faFlutter } from '@fortawesome/free-brands-svg-icons';
 import { 
-    faCode, faShieldHalved, faTerminal, faNetworkWired, faFileCode, 
+    faCode, faShieldHalved, faTerminal, faNetworkWired, 
     faLayerGroup, faC, faMagnifyingGlassChart, faUserSecret, 
     faShieldVirus, faLock, faDiagramProject, faEthernet, 
     faFileWaveform, faServer
@@ -22,7 +22,6 @@ export const LinuxIcon = () => <FontAwesomeIcon icon={faLinux} className="text-3
 export const KotlinIcon = () => (
     <img src="/icons/kotlin.png" alt="Kotlin Icon" className="w-10 h-10" />
 );
-const XmlIcon = () => <FontAwesomeIcon icon={faFileCode} className="text-4xl text-orange-500" />;
 
 export const JetpackIcon = () => {
     const id = useId();
