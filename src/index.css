@@ -56,6 +56,40 @@
       opacity: 0;
     }
   }
+
+  /* Sonar radar pulse animation */
+  .blink-dot {
+    position: relative;
+  }
+
+  .blink-dot::before,
+  .blink-dot::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background-color: rgba(34, 197, 94, 0.6);
+    transform: translate(-50%, -50%);
+    animation: sonar-pulse 2s ease-out infinite;
+  }
+
+  .blink-dot::after {
+    animation-delay: 1s;
+  }
+
+  @keyframes sonar-pulse {
+    0% {
+      transform: translate(-50%, -50%) scale(1);
+      opacity: 1;
+    }
+    100% {
+      transform: translate(-50%, -50%) scale(4);
+      opacity: 0;
+    }
+  }
 }
 
 @layer utilities {

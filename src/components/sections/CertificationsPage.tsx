@@ -37,12 +37,12 @@ const CertificationCard: React.FC<{ cert: Certification; onImageClick: (image: s
           </div>
         </div>
       </div>
-      <div className="p-5 flex flex-col justify-between" style={{ minHeight: '170px' }}>
+      <div className="p-4 sm:p-5 flex flex-col justify-between" style={{ minHeight: '160px' }}>
         <div>
-          <h3 className="text-md font-bold text-gray-900 dark:text-white mb-2 leading-snug h-12">
+          <h3 className="text-sm sm:text-base font-bold text-gray-900 dark:text-white mb-2 leading-snug line-clamp-2">
             {cert.title}
           </h3>
-          <p className="text-sm text-gray-600 dark:text-gray-400 font-medium">{cert.issuer}</p>
+          <p className="text-xs sm:text-sm text-gray-600 dark:text-gray-400 font-medium">{cert.issuer}</p>
           <p className="text-xs text-gray-500 dark:text-gray-500 mt-1">{cert.date}</p>
         </div>
         {cert.verifyUrl && (
@@ -78,17 +78,17 @@ const CertificationsPage: React.FC = () => {
     <>
       <section id="certifications-page" className="py-20 lg:py-32">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-extrabold text-gray-900 dark:text-white">
+          <div className="text-center mb-12 sm:mb-16">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-gray-900 dark:text-white">
               My <span className="text-indigo-600 dark:text-indigo-400">Certifications</span>
             </h2>
-            <div className="w-32 h-1.5 bg-gradient-to-r from-indigo-600 to-purple-600 mx-auto mt-6 rounded-full"></div>
-            <p className="mt-8 text-lg text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
+            <div className="w-32 h-1.5 bg-gradient-to-r from-indigo-600 to-purple-600 mx-auto mt-4 sm:mt-6 rounded-full"></div>
+            <p className="mt-6 sm:mt-8 text-sm sm:text-base lg:text-lg text-gray-600 dark:text-gray-400 max-w-3xl mx-auto px-4">
               A showcase of my professional development and qualifications in cybersecurity and software development.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 max-w-6xl mx-auto">
             {CERTIFICATIONS.map((cert) => (
               <CertificationCard key={cert.title + cert.date} cert={cert} onImageClick={openModal} />
             ))}

@@ -40,17 +40,17 @@ const ContactPage: React.FC = () => {
   return (
     <section id="contact-page" className="py-20 lg:py-32">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-extrabold text-gray-900 dark:text-white">
+        <div className="text-center mb-12 sm:mb-16">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-gray-900 dark:text-white">
             Get In <span className="text-indigo-600 dark:text-indigo-400">Touch</span>
           </h2>
-          <div className="w-32 h-1.5 bg-gradient-to-r from-indigo-600 to-purple-600 mx-auto mt-6 rounded-full"></div>
-          <p className="mt-8 text-lg text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
-            I’m always open to discussing new projects, creative ideas, or opportunities to be part of an amazing team. Let's connect!
+          <div className="w-32 h-1.5 bg-gradient-to-r from-indigo-600 to-purple-600 mx-auto mt-4 sm:mt-6 rounded-full"></div>
+          <p className="mt-6 sm:mt-8 text-sm sm:text-base lg:text-lg text-gray-600 dark:text-gray-400 max-w-3xl mx-auto px-4">
+            I'm always open to discussing new projects, creative ideas, or opportunities to be part of an amazing team. Let's connect!
           </p>
         </div>
 
-        <div className="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
           {contactItems.map(item => (
             <ContactLinkCard 
                 key={item.title}

@@ -79,8 +79,14 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, theme, handleThemeSwitch, cur
 
         <div className="flex items-center p-4 h-20 border-b border-gray-200 dark:border-gray-800">
              <img src="/avatar.jpg" alt="Avatar" className="rounded-full w-10 h-10 transition-all duration-300" />
-             <div className="ml-3 overflow-hidden md:opacity-0 group-hover:md:opacity-100 transition-opacity duration-300">
-                 <h1 className="text-md font-bold text-gray-900 dark:text-white whitespace-nowrap">{NAME.split(' ')[0]}</h1>
+             <div className="ml-3 overflow-hidden md:opacity-0 group-hover:md:opacity-100 transition-opacity duration-300 flex-1 min-w-0">
+                 <div className="flex items-center gap-1.5 mb-0.5">
+                   <h1 className="text-md font-bold text-gray-900 dark:text-white whitespace-nowrap">{NAME.split(' ')[0]}</h1>
+                   <div className="flex items-center justify-center gap-1 px-1.5 py-0.5 border border-green-500/30 dark:border-green-400/30 rounded-full bg-green-50/50 dark:bg-green-900/10">
+                     <span className="w-1.5 h-1.5 bg-green-500 rounded-full blink-dot flex-shrink-0"></span>
+                     <span className="text-[10px] text-green-600 dark:text-green-400 font-medium whitespace-nowrap">Open to Work</span>
+                   </div>
+                 </div>
                  <h2 className="text-md font-bold text-indigo-600 dark:text-indigo-400 whitespace-nowrap">{NAME.split(' ')[1]}</h2>
              </div>
         </div>
