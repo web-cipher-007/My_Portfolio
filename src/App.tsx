@@ -15,6 +15,7 @@ import ProjectsPage from './components/sections/ProjectsPage';
 import PageLoader from './components/PageLoader';
 import ScrollToTopButton from './components/ScrollToTopButton';
 import CertificationsPage from './components/sections/CertificationsPage';
+import AnimatedBackground from './components/AnimatedBackground';
 
 const App: React.FC = () => {
   const [theme, setTheme] = useState(() => {
@@ -201,7 +202,8 @@ const App: React.FC = () => {
   return (
     <>
       <PageLoader isNavigating={isNavigating} />
-      <div className="bg-gray-50 dark:bg-gray-900 text-gray-800 dark:text-gray-200 font-sans transition-colors duration-300">
+      <div className="bg-gray-50 dark:bg-gray-900 text-gray-800 dark:text-gray-200 font-sans transition-colors duration-300 relative">
+        <AnimatedBackground />
         {/* Backdrop overlay for mobile */}
         {isSidebarOpen && (
             <div
@@ -229,7 +231,7 @@ const App: React.FC = () => {
           onNavigate={handleNavigate}
           toggleSidebar={toggleSidebar}
         />
-        <div className="min-h-screen flex flex-col justify-between transition-all duration-300 ease-in-out md:pl-20">
+        <div className="min-h-screen flex flex-col justify-between transition-all duration-300 ease-in-out md:pl-20 relative z-10">
           <main className={`flex-1 transition-opacity duration-300 ease-in-out ${isContentVisible ? 'opacity-100' : 'opacity-0'}`}>
             {renderPage()}
           </main>

@@ -35,7 +35,7 @@ const experienceHistory = [
 
 const Experience: React.FC = () => {
   return (
-    <section id="experience" className="py-20 lg:py-32 bg-gray-100 dark:bg-gray-950/50">
+    <section id="experience" className="py-20 lg:py-32">
        <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-extrabold text-gray-900 dark:text-white">
@@ -55,19 +55,24 @@ const Experience: React.FC = () => {
                 <a href={job.companyUrl} target="_blank" rel="noopener noreferrer" className="absolute -top-8 sm:-top-10 -left-8 sm:-left-10 w-16 h-16 sm:w-20 sm:h-20 bg-white dark:bg-gray-800 p-2 rounded-full border-4 border-white dark:border-gray-950/50 flex items-center justify-center hover:ring-4 hover:ring-indigo-500/50 transition-all z-10">
                    <img src={job.logoUrl} alt={`${job.company} logo`} className="w-full h-full object-contain rounded-full" />
                 </a>
-                <div className="bg-white/60 dark:bg-gray-800/50 backdrop-blur-lg p-8 rounded-xl shadow-lg border border-gray-200/50 dark:border-gray-800/50 hover:border-indigo-500/30 transition-colors">
-                  <div className="flex flex-col sm:flex-row justify-between sm:items-start mb-2">
-                     <div className="flex-grow mb-2 sm:mb-0 pr-4">
-                        <h3 className="text-xl font-bold text-indigo-600 dark:text-indigo-400">{job.role}</h3>
-                        <a href={job.companyUrl} target="_blank" rel="noopener noreferrer" className="text-lg font-semibold text-gray-700 dark:text-gray-300 mt-1 hover:underline">{job.company} ({job.location})</a>
+                <div className="bg-white/60 dark:bg-gray-800/50 backdrop-blur-lg p-4 pl-6 sm:p-5 lg:p-6 rounded-xl shadow-lg border border-gray-200/50 dark:border-gray-800/50 hover:border-indigo-500/30 transition-colors max-w-full sm:max-w-2xl lg:max-w-3xl">
+                  <div className="flex flex-col sm:flex-row justify-between sm:items-start gap-2 mb-2">
+                     <div className="flex-grow">
+                        <h3 className="text-base sm:text-lg font-bold text-indigo-600 dark:text-indigo-400 leading-tight">{job.role}</h3>
+                        <a href={job.companyUrl} target="_blank" rel="noopener noreferrer" className="text-sm sm:text-base font-semibold text-gray-700 dark:text-gray-300 mt-0.5 hover:underline hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors inline-block">{job.company} ({job.location})</a>
                     </div>
-                    <span className="bg-indigo-100 text-indigo-800 dark:bg-indigo-900/50 dark:text-indigo-300 text-sm font-semibold px-3 py-1 rounded-full whitespace-nowrap mt-2 sm:mt-0">{job.duration}</span>
+                    <span className="bg-indigo-100 text-indigo-800 dark:bg-indigo-900/50 dark:text-indigo-300 text-xs font-semibold px-2.5 py-1 rounded-full whitespace-nowrap self-start">{job.duration}</span>
                   </div>
-                  <ul className="list-disc list-inside text-gray-600 dark:text-gray-400 mt-4 space-y-2.5 pl-2 leading-relaxed">
-                    {job.tasks.map((task, i) => (
-                        <li key={i}>{task}</li>
-                    ))}
-                  </ul>
+                  <div className="mt-2.5 max-h-44 sm:max-h-48 overflow-y-auto pr-2 scrollbar-thin scrollbar-thumb-indigo-300 dark:scrollbar-thumb-indigo-700 scrollbar-track-transparent hover:scrollbar-thumb-indigo-400 dark:hover:scrollbar-thumb-indigo-600">
+                    <ul className="list-none text-gray-600 dark:text-gray-400 space-y-1.5 sm:space-y-2 text-xs sm:text-sm leading-relaxed">
+                      {job.tasks.map((task, i) => (
+                          <li key={i} className="flex items-start">
+                            <span className="text-indigo-500 dark:text-indigo-400 mr-2 mt-1 flex-shrink-0">▹</span>
+                            <span className="flex-1">{task}</span>
+                          </li>
+                      ))}
+                    </ul>
+                  </div>
                 </div>
               </div>
             ))}
