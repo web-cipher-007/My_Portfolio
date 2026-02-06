@@ -77,7 +77,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, theme, handleThemeSwitch, cur
             </svg>
         </button>
 
-        <div className="flex items-center p-4 h-20 border-b border-gray-200 dark:border-gray-800">
+        <div className="flex items-center p-4 pr-14 h-20 border-b border-gray-200 dark:border-gray-800 md:pr-4">
              <img src="/avatar.jpg" alt="Avatar" className="rounded-full w-10 h-10 transition-all duration-300" />
              <div className="ml-3 overflow-hidden md:opacity-0 group-hover:md:opacity-100 transition-opacity duration-300 flex-1 min-w-0">
                  <div className="flex items-center gap-1.5 mb-0.5">

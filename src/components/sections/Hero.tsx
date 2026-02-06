@@ -94,7 +94,7 @@ const Hero: React.FC = () => {
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-gray-900 dark:text-white mb-4">
               <span className="text-indigo-600 dark:text-indigo-400">{NAME}</span>
             </h1>
-            <h2 className="text-2xl md:text-3xl font-semibold mb-8 h-10">
+            <h2 className="text-2xl md:text-3xl font-semibold mb-8 min-h-16 md:min-h-20">
               I am <Typewriter roles={ROLES} />
             </h2>
             <p className="max-w-xl mx-auto lg:mx-0 text-base sm:text-lg text-gray-600 dark:text-gray-400 mb-8">
