@@ -61,7 +61,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, theme, handleThemeSwitch, cur
     border-r border-gray-200 dark:border-gray-800 z-40 
     flex flex-col overflow-x-hidden
     transition-all duration-300 ease-in-out group
-    w-64 md:w-20 md:hover:w-64
+    w-80 md:w-20 md:hover:w-80
     ${isOpen ? 'translate-x-0' : '-translate-x-full md:translate-x-0'}
   `;
 
@@ -77,12 +77,12 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, theme, handleThemeSwitch, cur
             </svg>
         </button>
 
-        <div className="flex items-center p-4 pr-14 h-20 border-b border-gray-200 dark:border-gray-800 md:pr-4">
-             <img src="/avatar.jpg" alt="Avatar" className="rounded-full w-10 h-10 transition-all duration-300" />
+        <div className="flex items-center p-4 pr-12 h-20 border-b border-gray-200 dark:border-gray-800 md:pr-4">
+             <img src="/avatar.jpg" alt="Avatar" className="rounded-full w-10 h-10 transition-all duration-300 flex-shrink-0" />
              <div className="ml-3 overflow-hidden md:opacity-0 group-hover:md:opacity-100 transition-opacity duration-300 flex-1 min-w-0">
                  <div className="flex items-center gap-1.5 mb-0.5">
                    <h1 className="text-md font-bold text-gray-900 dark:text-white whitespace-nowrap">{NAME.split(' ')[0]}</h1>
-                   <div className="flex items-center justify-center gap-1 px-1.5 py-0.5 border border-green-500/30 dark:border-green-400/30 rounded-full bg-green-50/50 dark:bg-green-900/10">
+                   <div className="flex items-center gap-1 px-1.5 py-0.5 border border-green-500/30 dark:border-green-400/30 rounded-full bg-green-50/50 dark:bg-green-900/10">
                      <span className="w-1.5 h-1.5 bg-green-500 rounded-full blink-dot flex-shrink-0"></span>
                      <span className="text-[10px] text-green-600 dark:text-green-400 font-medium whitespace-nowrap">Open to Work</span>
                    </div>
