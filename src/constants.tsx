@@ -294,6 +294,12 @@ export const BLOGS: Blog[] = [
 
 export const CERTIFICATIONS: Certification[] = [
   {
+    title: 'API Penetration Testing',
+    issuer: 'APIsec University',
+    date: 'Mar 2026',
+    image: '/images/certs/API_Pentesting.png',
+  },
+  {
     title: 'Clifford Chance – Cyber Security Job Simulation',
     issuer: 'Forage',
     date: 'Jun 2025',
