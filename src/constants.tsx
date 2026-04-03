@@ -298,6 +298,7 @@ export const CERTIFICATIONS: Certification[] = [
     issuer: 'APIsec University',
     date: 'Mar 2026',
     image: '/images/certs/API_Pentesting.png',
+    verifyUrl: 'https://www.credly.com/badges/6896a374-564d-4bb2-8879-1c7685c46118/public_url',
   },
   {
     title: 'Clifford Chance – Cyber Security Job Simulation',
