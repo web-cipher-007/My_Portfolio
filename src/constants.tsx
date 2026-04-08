@@ -94,7 +94,7 @@ export const ROLES = [
 export const INTRO = "I'm an Application Developer and Web Penetration Tester who bridges the gap between building and breaking applications. My expertise in both offensive security and mobile development allows me to engineer robust, secure, and resilient digital experiences from the ground up.";
 export const RESUME_URL = "/resume.pdf";
 export const EMAIL = "web-cipher-007@proton.me";
-export const PHONE_NUMBER = "+977-9864455823";
+export const PHONE_NUMBER = "+977-9818000000";
 export const LOCATION = "Kathmandu, Nepal";
 export const GITHUB_PROFILE_URL = "https://github.com/web-cipher-007";
 export const LINKEDIN_PROFILE_URL = "https://www.linkedin.com/in/sandeshpoudel007";
@@ -179,6 +179,14 @@ export const SKILLS_DATA: { title: string; icon: React.ReactNode; skills: { name
 ];
 
 export const PROJECTS: Project[] = [
+     {
+        title: 'My Tasks',
+        description: 'A tasks managing app made with Flutter & Supabase backend.',
+        category: 'Apps',
+        image: '/images/projects/my_tasks.png',
+        githubUrl: 'https://github.com/web-cipher-007/Task-Manager-App',
+        featured: true
+    },
     {
         title: 'Tweetzy',
         description: 'Tweetzy is a modern Android application meticulously engineered with Jetpack Compose for a declarative UI, utilizing MVVM architecture, Dagger-Hilt for Dependency Injection, and Kotlin Coroutines/Flows for a reactive data pipeline, all driven by a Retrofit for API access that performs server-side data filtering via a custom X-JSON-Path header.',
